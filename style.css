@@ -1,0 +1,115 @@
+@font-face {
+  font-family: norse;
+  src: url(fonts/Norse-Bold.otf);
+}
+
+:root {
+  --primary-text-color: #202020f2;
+  --secondary-text-color: #3f3f3ff2;
+  --button-color: #596d48;
+  --border-main-color: #e5e7eb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+
+  background-color: rgb(236, 236, 236);
+  font-family: norse;
+  display: flex;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100%;
+  width: 30%;
+  min-width: 270px;
+  position: relative;
+}
+
+.container > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.container > div {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  width: 100%;
+  background-color: black;
+  top: 200px;
+  opacity: 60%;
+  padding: 3rem;
+}
+
+.container > div > img {
+  width: 90%;
+  max-width: 100px;
+}
+
+.container > div > h1 {
+  color: rgb(254, 254, 254);
+  border: 3px solid gray;
+  font-size: 6rem;
+}
+
+.right-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-container h1 {
+  width: 80%;
+  margin: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--primary-text-color);
+  font-size: 2.1rem;
+  border: 5px solid black;
+}
+
+@media only screen and (max-width: 750px) {
+  .container {
+    display: none;
+  }
+  .right-container h1 {
+    font-size: 1.6rem;
+  }
+}
+
+.right-container > form {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(247, 247, 247);
+  height: min-content;
+  padding: 10px 3rem;
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 0.8rem;
+  box-shadow: 0px 8px 20px rgb(184, 184, 184);
+}
+
+.right-container > form > div {
+  display: flex;
+
+  gap: 3rem;
+  margin: 20px 0px;
+}
+
+.right-container > form > div > div {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  border: 1px solid var(--border-main-color);
+  border-radius: 2px;
+}
