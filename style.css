@@ -13,7 +13,7 @@
 body {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  min-height: 100%;
 
   background-color: rgb(236, 236, 236);
   font-family: norse;
@@ -29,10 +29,11 @@ body {
 }
 
 .container {
-  height: 100%;
   width: 30%;
   min-width: 270px;
+  min-height: 100%;
   position: relative;
+  border: 5px solid black;
 }
 
 .container > img {
@@ -61,7 +62,6 @@ body {
 
 .container > div > h1 {
   color: rgb(254, 254, 254);
-  border: 3px solid gray;
   font-size: 6rem;
 }
 
@@ -96,6 +96,9 @@ body {
   .right-container h1 {
     font-size: 1.6rem;
   }
+  .right-container > form {
+    font-size: 0.7rem;
+  }
 }
 
 .right-container > form {
@@ -111,7 +114,6 @@ body {
 
 .right-container > form > div {
   display: flex;
-
   gap: 3rem;
   margin: 20px 0px;
 }
@@ -119,13 +121,15 @@ body {
 .right-container > form > div > div {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 300px;
 }
 
 input {
   border: 1px solid var(--border-main-color);
   border-radius: 2px;
   height: 2rem;
-  width: 17rem;
+  width: 100%;
 }
 
 input:user-invalid {
