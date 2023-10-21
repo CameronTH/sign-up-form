@@ -128,7 +128,7 @@ input {
   width: 17rem;
 }
 
-input:invalid {
+input:user-invalid {
   box-shadow: 0 0 5px #d45252;
   border-color: #b03535;
 }
